@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yf/vW2eoLu4=",
+  "dgSpecHash": "HFzQoohgCho=",
   "success": true,
-  "projectFilePath": "C:\\Itlahomework\\ConsultaMedica\\ConsultaMedica\\ConsultaMedica.csproj",
+  "projectFilePath": "C:\\Users\\julio\\Documents\\GitHub\\Itla-Homework\\ConsultaMedica\\ConsultaMedica\\ConsultaMedica.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\julio\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\julio\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

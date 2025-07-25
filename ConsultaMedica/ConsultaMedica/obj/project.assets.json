@@ -1833,11 +1833,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Itlahomework\\ConsultaMedica\\ConsultaMedica\\ConsultaMedica.csproj",
+      "projectUniqueName": "C:\\Users\\julio\\Documents\\GitHub\\Itla-Homework\\ConsultaMedica\\ConsultaMedica\\ConsultaMedica.csproj",
       "projectName": "ConsultaMedica",
-      "projectPath": "C:\\Itlahomework\\ConsultaMedica\\ConsultaMedica\\ConsultaMedica.csproj",
+      "projectPath": "C:\\Users\\julio\\Documents\\GitHub\\Itla-Homework\\ConsultaMedica\\ConsultaMedica\\ConsultaMedica.csproj",
       "packagesPath": "C:\\Users\\julio\\.nuget\\packages\\",
-      "outputPath": "C:\\Itlahomework\\ConsultaMedica\\ConsultaMedica\\obj\\",
+      "outputPath": "C:\\Users\\julio\\Documents\\GitHub\\Itla-Homework\\ConsultaMedica\\ConsultaMedica\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

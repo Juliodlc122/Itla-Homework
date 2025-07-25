@@ -1,0 +1,19 @@
+﻿Compilación iniciada a las 1:27 p. m....
+1>------ Operación Compilar iniciada: Proyecto: ConsultaMedica, configuración: Debug Any CPU ------
+1>Omitiendo analizadores para acelerar la compilación. Puede ejecutar los comandos "Build" o "Rebuild" para ejecutar los analizadores.
+1>C:\Itlahomework\ConsultaMedica\ConsultaMedica\dotnet.cs(1,16,1,22): warning CS8981: El nombre de tipo 'dotnet' solo contiene caracteres ASCII en minúsculas. Estos nombres pueden quedar reservados para el idioma.
+1>C:\Itlahomework\ConsultaMedica\ConsultaMedica\Program.cs(30,34,30,47): warning CS0618: 'SqlConnection' está obsoleto: 'Use the Microsoft.Data.SqlClient package instead.'
+1>C:\Itlahomework\ConsultaMedica\ConsultaMedica\Program.cs(35,33,35,43): warning CS0618: 'SqlCommand' está obsoleto: 'Use the Microsoft.Data.SqlClient package instead.'
+1>C:\Itlahomework\ConsultaMedica\ConsultaMedica\Program.cs(49,34,49,47): warning CS0618: 'SqlConnection' está obsoleto: 'Use the Microsoft.Data.SqlClient package instead.'
+1>C:\Itlahomework\ConsultaMedica\ConsultaMedica\Program.cs(53,33,53,43): warning CS0618: 'SqlCommand' está obsoleto: 'Use the Microsoft.Data.SqlClient package instead.'
+1>C:\Itlahomework\ConsultaMedica\ConsultaMedica\Program.cs(71,34,71,47): warning CS0618: 'SqlConnection' está obsoleto: 'Use the Microsoft.Data.SqlClient package instead.'
+1>C:\Itlahomework\ConsultaMedica\ConsultaMedica\Program.cs(75,33,75,43): warning CS0618: 'SqlCommand' está obsoleto: 'Use the Microsoft.Data.SqlClient package instead.'
+1>C:\Itlahomework\ConsultaMedica\ConsultaMedica\Program.cs(87,34,87,47): warning CS0618: 'SqlConnection' está obsoleto: 'Use the Microsoft.Data.SqlClient package instead.'
+1>C:\Itlahomework\ConsultaMedica\ConsultaMedica\Program.cs(91,33,91,43): warning CS0618: 'SqlCommand' está obsoleto: 'Use the Microsoft.Data.SqlClient package instead.'
+1>C:\Itlahomework\ConsultaMedica\ConsultaMedica\Program.cs(102,34,102,47): warning CS0618: 'SqlConnection' está obsoleto: 'Use the Microsoft.Data.SqlClient package instead.'
+1>C:\Itlahomework\ConsultaMedica\ConsultaMedica\Program.cs(106,33,106,43): warning CS0618: 'SqlCommand' está obsoleto: 'Use the Microsoft.Data.SqlClient package instead.'
+1>C:\Itlahomework\ConsultaMedica\ConsultaMedica\Program.cs(107,19,107,32): warning CS0618: 'SqlDataReader' está obsoleto: 'Use the Microsoft.Data.SqlClient package instead.'
+1>ConsultaMedica -> C:\Itlahomework\ConsultaMedica\ConsultaMedica\bin\Debug\net8.0\ConsultaMedica.dll
+1>Compilación del proyecto "ConsultaMedica.csproj" terminada.
+========== Compilación: 1 correcto, 0 erróneo, 0 actualizado, 0 omitido ==========
+========== Compilar completado a las 1:27 p. m. y tardó 01.099 segundos ==========

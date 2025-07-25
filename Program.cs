@@ -39,8 +39,8 @@ namespace CitasMedicasApp
             cmd.Parameters.AddWithValue("@telefono", cita.Telefono);
             cmd.Parameters.AddWithValue("@fecha", cita.Fecha);
             cmd.Parameters.AddWithValue("@motivo", cita.Motivo);
-
             cmd.ExecuteNonQuery();
+
             Console.WriteLine("Cita agregada correctamente.");
         }
 
@@ -58,7 +58,6 @@ namespace CitasMedicasApp
             cmd.Parameters.AddWithValue("@fecha", cita.Fecha);
             cmd.Parameters.AddWithValue("@motivo", cita.Motivo);
             cmd.Parameters.AddWithValue("@id", cita.Id);
-
             int rows = cmd.ExecuteNonQuery();
 
             if (rows > 0)
@@ -72,11 +71,9 @@ namespace CitasMedicasApp
             using var conn = new SqlConnection(connectionString);
             conn.Open();
 
-            // Primero borramos las historias relacionadas
-            string query = "DELETE FROM HistoriaMedica WHERE PacienteId = @id; DELETE FROM Citas WHERE Id = @id;";
+            string query = "DELETE FROM HistoriaMedica WHERE PacienteId=@id; DELETE FROM Citas WHERE Id=@id;";
             using var cmd = new SqlCommand(query, conn);
             cmd.Parameters.AddWithValue("@id", id);
-
             int rows = cmd.ExecuteNonQuery();
 
             if (rows > 0)
@@ -94,11 +91,12 @@ namespace CitasMedicasApp
             using var cmd = new SqlCommand(query, conn);
             cmd.Parameters.AddWithValue("@pacienteId", historia.PacienteId);
             cmd.Parameters.AddWithValue("@descripcion", historia.Descripcion);
-
             cmd.ExecuteNonQuery();
+
             Console.WriteLine("Historia médica agregada correctamente.");
         }
 
+        // Nuevo método para listar citas
         public void MostrarCitas()
         {
             using var conn = new SqlConnection(connectionString);
@@ -125,33 +123,6 @@ namespace CitasMedicasApp
                 Console.WriteLine($"{id} | {nombre} | {apellido} | {edad} | {telefono} | {fecha} | {motivo}");
             }
         }
-
-        public void MostrarHistoriaMedica(int pacienteId)
-        {
-            using var conn = new SqlConnection(connectionString);
-            conn.Open();
-
-            string query = "SELECT Descripcion FROM HistoriaMedica WHERE PacienteId = @pacienteId";
-            using var cmd = new SqlCommand(query, conn);
-            cmd.Parameters.AddWithValue("@pacienteId", pacienteId);
-
-            using SqlDataReader reader = cmd.ExecuteReader();
-
-            Console.WriteLine($"\nHistoria médica del paciente ID {pacienteId}:");
-
-            if (reader.HasRows)
-            {
-                int count = 1;
-                while (reader.Read())
-                {
-                    Console.WriteLine($"#{count++}: {reader.GetString(0)}");
-                }
-            }
-            else
-            {
-                Console.WriteLine("No se encontró historia médica para este paciente.");
-            }
-        }
     }
 
     class Program
@@ -169,8 +140,7 @@ namespace CitasMedicasApp
                 Console.WriteLine("3. Eliminar cita");
                 Console.WriteLine("4. Agregar historia médica");
                 Console.WriteLine("5. Mostrar citas");
-                Console.WriteLine("6. Ver historia médica");
-                Console.WriteLine("7. Salir");
+                Console.WriteLine("6. Salir");
                 Console.Write("Seleccione una opción: ");
 
                 string opcion = Console.ReadLine();
@@ -233,18 +203,6 @@ namespace CitasMedicasApp
                         break;
 
                     case "6":
-                        Console.Write("Ingrese el ID del paciente para ver la historia médica: ");
-                        if (int.TryParse(Console.ReadLine(), out int verId))
-                        {
-                            service.MostrarHistoriaMedica(verId);
-                        }
-                        else
-                        {
-                            Console.WriteLine("ID inválido.");
-                        }
-                        break;
-
-                    case "7":
                         salir = true;
                         Console.WriteLine("Saliendo...");
                         break;
@@ -266,8 +224,8 @@ namespace CitasMedicasApp
             Console.Write("Apellido: ");
             cita.Apellido = Console.ReadLine();
 
-            Console.Write("Edad: ");
             int edad;
+            Console.Write("Edad: ");
             while (!int.TryParse(Console.ReadLine(), out edad))
             {
                 Console.Write("Edad inválida, ingrese un número: ");
@@ -277,8 +235,8 @@ namespace CitasMedicasApp
             Console.Write("Teléfono: ");
             cita.Telefono = Console.ReadLine();
 
-            Console.Write("Fecha (AAAA-MM-DD HH:MM): ");
             DateTime fecha;
+            Console.Write("Fecha (AAAA-MM-DD HH:MM): ");
             while (!DateTime.TryParse(Console.ReadLine(), out fecha))
             {
                 Console.Write("Fecha inválida, intente nuevamente (Ej: 2025-07-25 15:30): ");
